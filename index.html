@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic website of HAMIMID Mourad, University Professor and Researcher in Electrical Engineering and Electromechanics.">
+  <title>HAMIMID Mourad | University Professor & Researcher</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#17365d;--secondary:#2d6a9f;--accent:#c99a3e;--light:#f5f7fa;--dark:#17212b;--text:#3d4650;--white:#fff;--border:#e4e8ed}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7;color:var(--text);background:var(--white)}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:1.2rem;font-weight:800;color:var(--primary);white-space:nowrap}
+    nav ul{display:flex;list-style:none;gap:24px}nav a{font-size:.95rem;font-weight:600;color:var(--dark)}nav a:hover{color:var(--secondary)}
+    .languages{display:flex;gap:5px;margin-left:10px}.languages button{border:1px solid var(--border);background:white;color:var(--dark);padding:5px 9px;border-radius:6px;cursor:pointer;font-size:.78rem;font-weight:700}.languages button.active,.languages button:hover{background:var(--primary);color:white}
+    .hero{background:linear-gradient(135deg,#f4f7fb 0%,#fff 60%);padding:90px 0 80px}.hero-grid{display:grid;grid-template-columns:1.5fr .8fr;align-items:center;gap:60px}
+    .eyebrow{color:var(--secondary);font-weight:800;font-size:.82rem;letter-spacing:1.5px;margin-bottom:12px}
+    h1{color:var(--primary);font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;margin-bottom:12px}.specialty{color:var(--accent);font-size:1.15rem;font-weight:700;margin-bottom:20px}
+    .hero-intro{max-width:760px;font-size:1.08rem;color:#4d5965;margin-bottom:30px}.buttons{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:7px;font-weight:700;transition:.2s}.btn-primary{background:var(--primary);color:white}.btn-primary:hover{background:#0f2845}.btn-outline{border:1px solid var(--primary);color:var(--primary)}.btn-outline:hover{background:var(--primary);color:white}
+    .profile-card{text-align:center;background:white;padding:25px;border-radius:16px;box-shadow:0 12px 35px rgba(23,54,93,.10);border:1px solid var(--border)}.profile-card img{width:190px;height:190px;object-fit:cover;border-radius:50%;border:5px solid #eef3f8;margin-bottom:15px}.profile-card strong{display:block;color:var(--primary);font-size:1rem}.profile-card span{display:block;color:#697582;font-size:.9rem;margin-top:4px}
+    section{padding:85px 0}section:nth-child(even){background:var(--light)}.section-heading{text-align:center;margin-bottom:45px}.section-heading h2{color:var(--primary);font-size:2.2rem;margin-bottom:8px}.section-heading p{color:#6a7480;max-width:720px;margin:auto}
+    .about-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:30px}.card{background:white;border:1px solid var(--border);border-radius:12px;padding:30px;height:100%;box-shadow:0 5px 18px rgba(0,0,0,.035)}.card h3{color:var(--primary);margin-bottom:15px;font-size:1.25rem}.card p{margin-bottom:14px}
+    .interest-list{list-style:none;display:grid;gap:11px}.interest-list li{padding:10px 13px;background:#f5f8fb;border-left:3px solid var(--accent);border-radius:5px;font-weight:600;color:var(--primary)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.course-card{background:white;border:1px solid var(--border);border-radius:12px;padding:27px;transition:transform .2s,box-shadow .2s}.course-card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(23,54,93,.08)}.course-number{color:var(--accent);font-weight:800;margin-bottom:8px}.course-card h3{color:var(--primary);margin-bottom:10px}
+    .contact-box{max-width:800px;margin:auto;text-align:center;background:white;border:1px solid var(--border);border-radius:14px;padding:40px;box-shadow:0 8px 25px rgba(0,0,0,.04)}.contact-box p{margin-bottom:22px}.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+    footer{background:var(--primary);color:white;text-align:center;padding:25px 0;font-size:.9rem}
+    body.rtl{direction:rtl}body.rtl .interest-list li{border-left:none;border-right:3px solid var(--accent)}body.rtl .languages{direction:ltr}
+    @media(max-width:850px){.nav{flex-wrap:wrap;padding:12px 0}nav{order:3;width:100%}nav ul{justify-content:center;flex-wrap:wrap;gap:15px}.languages{margin-left:auto}.hero-grid,.about-grid{grid-template-columns:1fr}.profile-card{max-width:400px;margin:auto}.cards{grid-template-columns:1fr}.hero{padding:60px 0}section{padding:60px 0}}
+    @media(max-width:500px){h1{font-size:2.45rem}.hero-intro{font-size:1rem}.contact-box,.card{padding:23px}.profile-card img{width:155px;height:155px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">HAMIMID Mourad</div>
+    <nav><ul>
+      <li><a href="#home" data-i18n="navHome">Home</a></li>
+      <li><a href="#about" data-i18n="navAbout">About</a></li>
+      <li><a href="#teaching" data-i18n="navTeaching">Teaching</a></li>
+      <li><a href="#research" data-i18n="navResearch">Research</a></li>
+      <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+    </ul></nav>
+    <div class="languages">
+      <button onclick="setLanguage('en')" id="enBtn">EN</button>
+      <button onclick="setLanguage('fr')" id="frBtn">FR</button>
+      <button onclick="setLanguage('ar')" id="arBtn">العربية</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow" data-i18n="eyebrow">UNIVERSITY PROFESSOR & RESEARCHER</div>
+      <h1>HAMIMID Mourad</h1>
+      <div class="specialty" data-i18n="specialty">Electrical Engineering · Electromechanics</div>
+      <p class="hero-intro" data-i18n="heroIntro">Welcome to my academic website. I am a university professor and researcher working at the intersection of engineering, applied mathematics, numerical computation and higher education. This website brings together my teaching activities, research interests, scientific publications and educational resources.</p>
+      <div class="buttons">
+        <a href="#about" class="btn btn-primary" data-i18n="discover">Discover my work</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="contactMe">Contact me</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="mourad.jpg" alt="HAMIMID Mourad">
+      <strong data-i18n="university">University of Bordj Bou Arreridj</strong>
+      <span data-i18n="department">Department: Electromechanics</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-heading"><h2 data-i18n="aboutTitle">About Me</h2><p data-i18n="aboutSubtitle">Academic profile, teaching activities, research interests and educational development.</p></div>
+    <div class="about-grid">
+      <div class="card">
+        <h3 data-i18n="profileHeading">University Professor & Researcher</h3>
+        <p data-i18n="profileText">I am a university professor and researcher at the University of Bordj Bou Arreridj, working in the fields of electrical engineering and electromechanics. My academic interests combine engineering, applied mathematics, numerical methods and computational techniques.</p>
+        <p data-i18n="profileText2">My academic activities include teaching engineering courses, developing educational resources, supporting students in their learning, and contributing to scientific research in modelling, numerical simulation and engineering applications.</p>
+        <p data-i18n="profileText3">Through this website, I aim to share useful academic materials, courses and resources with students, researchers and anyone interested in engineering education and applied numerical methods.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="interestsHeading">Academic Interests</h3>
+        <ul class="interest-list">
+          <li data-i18n="interest1">Numerical Methods</li>
+          <li data-i18n="interest2">C++ Programming</li>
+          <li data-i18n="interest3">Electromagnetic Field Theory</li>
+          <li data-i18n="interest4">Numerical Simulation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="container">
+    <div class="section-heading"><h2 data-i18n="teachingTitle">Courses & Teaching</h2><p data-i18n="teachingSubtitle">Courses, educational resources and engineering subjects.</p></div>
+    <div class="cards">
+      <div class="course-card"><div class="course-number">01</div><h3 data-i18n="course1">Numerical Methods</h3><p data-i18n="course1Text">Numerical techniques for solving engineering and mathematical problems, including nonlinear equations, interpolation, integration and differential equations.</p></div>
+      <div class="course-card"><div class="course-number">02</div><h3 data-i18n="course2">C++ Programming</h3><p data-i18n="course2Text">Fundamentals of C++ programming, variables, structures, classes, inheritance and object-oriented programming.</p></div>
+      <div class="course-card"><div class="course-number">03</div><h3 data-i18n="course3">Electromagnetic Field Theory</h3><p data-i18n="course3Text">Fundamental concepts of electromagnetic fields, Maxwell's equations, magnetic fields and electromagnetic applications.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <div class="section-heading"><h2 data-i18n="researchTitle">Research Interests</h2><p data-i18n="researchSubtitle">Areas of scientific research and engineering applications.</p></div>
+    <div class="cards">
+      <div class="course-card"><div class="course-number">01</div><h3 data-i18n="research1">Electromagnetic Modeling</h3><p data-i18n="research1Text">Modeling and analysis of electromagnetic phenomena for engineering applications.</p></div>
+      <div class="course-card"><div class="course-number">02</div><h3 data-i18n="research2">Hysteresis Modeling</h3><p data-i18n="research2Text">Study and modeling of magnetic hysteresis and nonlinear magnetic behavior.</p></div>
+      <div class="course-card"><div class="course-number">03</div><h3 data-i18n="research3">Numerical Simulation</h3><p data-i18n="research3Text">Numerical approaches and computational techniques applied to engineering problems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-heading"><h2 data-i18n="contactTitle">Let's connect</h2><p data-i18n="contactText">For academic questions, teaching resources, research collaboration or professional communication, please feel free to contact me.</p></div>
+    <div class="contact-box">
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:hamimid_mourad@hotmail.com">✉️ hamimid_mourad@hotmail.com</a>
+        <a class="btn btn-outline" href="https://scholar.google.com/citations?hl=en&amp;user=skG8SjIAAAAJ" target="_blank" rel="noopener"><span data-i18n="googleScholar">🎓 Google Scholar</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> HAMIMID Mourad — <span data-i18n="footerUniversity">University of Bordj Bou Arreridj</span></footer>
+
+<script>
+const translations = {
+  en:{
+    navHome:"Home",navAbout:"About",navTeaching:"Teaching",navResearch:"Research",navContact:"Contact",
+    eyebrow:"UNIVERSITY PROFESSOR & RESEARCHER",specialty:"Electrical Engineering · Electromechanics",
+    heroIntro:"Welcome to my academic website. I am a university professor and researcher working at the intersection of engineering, applied mathematics, numerical computation and higher education. This website brings together my teaching activities, research interests, scientific publications and educational resources.",
+    discover:"Discover my work",contactMe:"Contact me",university:"University of Bordj Bou Arreridj",department:"Department: Electromechanics",
+    aboutTitle:"About Me",aboutSubtitle:"Academic profile, teaching activities, research interests and educational development.",
+    profileHeading:"University Professor & Researcher",
+    profileText:"I am a university professor and researcher at the University of Bordj Bou Arreridj, working in the fields of electrical engineering and electromechanics. My academic interests combine engineering, applied mathematics, numerical methods and computational techniques.",
+    profileText2:"My academic activities include teaching engineering courses, developing educational resources, supporting students in their learning, and contributing to scientific research in modelling, numerical simulation and engineering applications.",
+    profileText3:"Through this website, I aim to share useful academic materials, courses and resources with students, researchers and anyone interested in engineering education and applied numerical methods.",
+    interestsHeading:"Academic Interests",interest1:"Numerical Methods",interest2:"C++ Programming",interest3:"Electromagnetic Field Theory",interest4:"Numerical Simulation",
+    teachingTitle:"Courses & Teaching",teachingSubtitle:"Courses, educational resources and engineering subjects.",
+    course1:"Numerical Methods",course1Text:"Numerical techniques for solving engineering and mathematical problems, including nonlinear equations, interpolation, integration and differential equations.",
+    course2:"C++ Programming",course2Text:"Fundamentals of C++ programming, variables, structures, classes, inheritance and object-oriented programming.",
+    course3:"Electromagnetic Field Theory",course3Text:"Fundamental concepts of electromagnetic fields, Maxwell's equations, magnetic fields and electromagnetic applications.",
+    researchTitle:"Research Interests",researchSubtitle:"Areas of scientific research and engineering applications.",
+    research1:"Electromagnetic Modeling",research1Text:"Modeling and analysis of electromagnetic phenomena for engineering applications.",
+    research2:"Hysteresis Modeling",research2Text:"Study and modeling of magnetic hysteresis and nonlinear magnetic behavior.",
+    research3:"Numerical Simulation",research3Text:"Numerical approaches and computational techniques applied to engineering problems.",
+    contactTitle:"Let's connect",contactText:"For academic questions, teaching resources, research collaboration or professional communication, please feel free to contact me.",
+    googleScholar:"🎓 Google Scholar",footerUniversity:"University of Bordj Bou Arreridj"
+  },
+  fr:{
+    navHome:"Accueil",navAbout:"À propos",navTeaching:"Enseignement",navResearch:"Recherche",navContact:"Contact",
+    eyebrow:"PROFESSEUR UNIVERSITAIRE & CHERCHEUR",specialty:"Génie électrique · Électromécanique",
+    heroIntro:"Bienvenue sur mon site académique. Je suis professeur universitaire et chercheur à l'intersection de l'ingénierie, des mathématiques appliquées, du calcul numérique et de l'enseignement supérieur. Ce site rassemble mes activités d'enseignement, mes intérêts de recherche, mes publications scientifiques et mes ressources pédagogiques.",
+    discover:"Découvrir mes activités",contactMe:"Me contacter",university:"Université de Bordj Bou Arreridj",department:"Département : Électromécanique",
+    aboutTitle:"À propos de moi",aboutSubtitle:"Profil académique, activités d'enseignement, intérêts de recherche et développement pédagogique.",
+    profileHeading:"Professeur universitaire & Chercheur",
+    profileText:"Je suis professeur universitaire et chercheur à l'Université de Bordj Bou Arreridj, dans les domaines du génie électrique et de l'électromécanique. Mes intérêts académiques associent l'ingénierie, les mathématiques appliquées, les méthodes numériques et les techniques de calcul.",
+    profileText2:"Mes activités académiques comprennent l'enseignement de matières d'ingénierie, le développement de ressources pédagogiques, l'accompagnement des étudiants dans leur apprentissage et la contribution à des travaux de recherche scientifique dans la modélisation, la simulation numérique et les applications d'ingénierie.",
+    profileText3:"À travers ce site, je souhaite partager des supports académiques, des cours et des ressources utiles avec les étudiants, les chercheurs et toute personne intéressée par l'enseignement de l'ingénierie et les méthodes numériques appliquées.",
+    interestsHeading:"Intérêts académiques",interest1:"Méthodes numériques",interest2:"Programmation C++",interest3:"Théorie du champ électromagnétique",interest4:"Simulation numérique",
+    teachingTitle:"Cours & Enseignement",teachingSubtitle:"Cours, ressources pédagogiques et matières d'ingénierie.",
+    course1:"Méthodes numériques",course1Text:"Techniques numériques pour résoudre des problèmes d'ingénierie et de mathématiques, notamment les équations non linéaires, l'interpolation, l'intégration et les équations différentielles.",
+    course2:"Programmation C++",course2Text:"Fondamentaux de la programmation C++, variables, structures, classes, héritage et programmation orientée objet.",
+    course3:"Théorie du champ électromagnétique",course3Text:"Concepts fondamentaux des champs électromagnétiques, équations de Maxwell, champs magnétiques et applications électromagnétiques.",
+    researchTitle:"Intérêts de recherche",researchSubtitle:"Domaines de recherche scientifique et applications en ingénierie.",
+    research1:"Modélisation électromagnétique",research1Text:"Modélisation et analyse des phénomènes électromagnétiques pour des applications en ingénierie.",
+    research2:"Modélisation de l'hystérésis",research2Text:"Étude et modélisation de l'hystérésis magnétique et du comportement magnétique non linéaire.",
+    research3:"Simulation numérique",research3Text:"Approches numériques et techniques de calcul appliquées aux problèmes d'ingénierie.",
+    contactTitle:"Restons en contact",contactText:"Pour toute question académique, ressource pédagogique, collaboration scientifique ou communication professionnelle, n'hésitez pas à me contacter.",
+    googleScholar:"🎓 Google Scholar",footerUniversity:"Université de Bordj Bou Arreridj"
+  },
+  ar:{
+    navHome:"الرئيسية",navAbout:"نبذة عني",navTeaching:"التدريس",navResearch:"البحث العلمي",navContact:"اتصل بي",
+    eyebrow:"أستاذ جامعي وباحث",specialty:"الهندسة الكهربائية · الكهروميكانيك",
+    heroIntro:"مرحبًا بكم في موقعي الأكاديمي. أنا أستاذ جامعي وباحث أعمل في مجالات الهندسة والرياضيات التطبيقية والحساب العددي والتعليم العالي. يجمع هذا الموقع أنشطتي في مجال التدريس واهتماماتي البحثية ومنشوراتي العلمية ومواردي التعليمية.",
+    discover:"اكتشف أعمالي",contactMe:"اتصل بي",university:"جامعة برج بوعريريج",department:"القسم: الكهروميكانيك",
+    aboutTitle:"نبذة عني",aboutSubtitle:"المسار الأكاديمي، أنشطة التدريس، اهتمامات البحث العلمي وتطوير الموارد التعليمية.",
+    profileHeading:"أستاذ جامعي وباحث",
+    profileText:"أنا أستاذ جامعي وباحث في جامعة برج بوعريريج، أعمل في مجالي الهندسة الكهربائية والكهروميكانيك. تجمع اهتماماتي الأكاديمية بين الهندسة والرياضيات التطبيقية والطرق العددية وتقنيات الحساب.",
+    profileText2:"تشمل أنشطتي الأكاديمية تدريس المواد الهندسية، وتطوير الموارد التعليمية، ومساعدة الطلبة في مسارهم التعليمي، والمساهمة في البحث العلمي في مجالات النمذجة والمحاكاة العددية والتطبيقات الهندسية.",
+    profileText3:"من خلال هذا الموقع، أهدف إلى مشاركة المواد الأكاديمية والدروس والموارد المفيدة مع الطلبة والباحثين وكل المهتمين بتعليم الهندسة والطرق العددية التطبيقية.",
+    interestsHeading:"الاهتمامات الأكاديمية",interest1:"الطرق العددية",interest2:"برمجة C++",interest3:"نظرية الحقول الكهرومغناطيسية",interest4:"المحاكاة العددية",
+    teachingTitle:"المقررات والتدريس",teachingSubtitle:"المقررات والموارد التعليمية والمواد الهندسية.",
+    course1:"الطرق العددية",course1Text:"تقنيات عددية لحل المسائل الهندسية والرياضية، بما في ذلك المعادلات غير الخطية والاستيفاء والتكامل والمعادلات التفاضلية.",
+    course2:"برمجة C++",course2Text:"أساسيات برمجة C++، والمتغيرات، والهياكل، والأصناف، والوراثة، والبرمجة كائنية التوجه.",
+    course3:"نظرية الحقول الكهرومغناطيسية",course3Text:"المفاهيم الأساسية للحقول الكهرومغناطيسية، ومعادلات ماكسويل، والحقول المغناطيسية والتطبيقات الكهرومغناطيسية.",
+    researchTitle:"اهتمامات البحث العلمي",researchSubtitle:"مجالات البحث العلمي والتطبيقات الهندسية.",
+    research1:"النمذجة الكهرومغناطيسية",research1Text:"نمذجة وتحليل الظواهر الكهرومغناطيسية وتطبيقاتها في مجال الهندسة.",
+    research2:"نمذجة الهسترة",research2Text:"دراسة ونمذجة ظاهرة الهسترة المغناطيسية والسلوك المغناطيسي غير الخطي.",
+    research3:"المحاكاة العددية",research3Text:"الأساليب العددية وتقنيات الحساب المطبقة على المسائل الهندسية.",
+    contactTitle:"لنتواصل",contactText:"للاستفسارات الأكاديمية أو الموارد التعليمية أو التعاون البحثي أو التواصل المهني، لا تتردد في الاتصال بي.",
+    googleScholar:"🎓 Google Scholar",footerUniversity:"جامعة برج بوعريريج"
+  }
+};
+
+function setLanguage(lang){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.getAttribute("data-i18n");
+    if(translations[lang]&&translations[lang][key]) el.textContent=translations[lang][key];
+  });
+  if(lang==="ar"){
+    document.body.classList.add("rtl");
+    document.documentElement.lang="ar";
+  }else{
+    document.body.classList.remove("rtl");
+    document.documentElement.lang=lang;
+  }
+  document.querySelectorAll(".languages button").forEach(btn=>btn.classList.remove("active"));
+  document.getElementById(lang+"Btn").classList.add("active");
+  localStorage.setItem("preferredLanguage",lang);
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+setLanguage(localStorage.getItem("preferredLanguage")||"en");
+</script>
+</body>
+</html>
